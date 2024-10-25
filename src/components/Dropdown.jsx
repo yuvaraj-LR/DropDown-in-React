@@ -26,7 +26,7 @@ export const DropDown = () => {
                 <p className="dropdown_title">Do you want to select a role from this dropdown?</p>
 
                 <div className="dropdown">
-                    <div className="dropdown_box" onClick={() => setToggleDropdown(!toggleDropdown)}>
+                    <div className="dropdown_box" onMouseOver={() => setToggleDropdown(true)}>
                         <p>{option}</p>
                         <img src={toggleDropdown ? "/icon/caret-up-solid.svg" : "/icon/caret-down-solid.svg"} alt="down-arrow" width="15" />
                     </div>

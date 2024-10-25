@@ -28,6 +28,7 @@
     align-items: center;
     border-radius: 15px;
     cursor: pointer;
+    transition: all .25s ease-in-out;
 }
 
 .dropdown_box p {
@@ -37,9 +38,10 @@
 
 .dropdown_option {
     border: 1px solid #c1c1c1;
+    transition: all .25s ease-in-out;
     border-radius: 15px;
     max-width: 284px;
-    width: 100%;
+    width: 100%;    
 }
 
 .options {
