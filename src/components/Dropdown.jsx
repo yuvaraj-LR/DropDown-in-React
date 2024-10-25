@@ -25,15 +25,15 @@ export const DropDown = () => {
                 />
                 <p className="dropdown_title">Do you want to select a role from this dropdown?</p>
 
-                <div className="dropdown">
+                <div className="dropdown" onMouseLeave={() => setToggleDropdown(false)}>
                     <div className="dropdown_box" onMouseOver={() => setToggleDropdown(true)}>
                         <p>{option}</p>
                         <img src={toggleDropdown ? "/icon/caret-up-solid.svg" : "/icon/caret-down-solid.svg"} alt="down-arrow" width="15" />
                     </div>
                     <div className={` ${!toggleDropdown ? "hidden" : "dropdown_option"}`}>
                         <div>
-                            {dropdownlistoptions.map((option, i) => (
-                                <div key={i} className="options" onClick={() => onClickSelectOption(option)} >{option}</div>
+                            {dropdownlistoptions.map((opt, i) => (
+                                <div key={i} className={`options ${option === opt ? "active" : ""}`} onClick={() => onClickSelectOption(opt)} >{opt}</div>
                             ))}
                         </div>
                     </div>
